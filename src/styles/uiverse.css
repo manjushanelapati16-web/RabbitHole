@@ -1,0 +1,482 @@
+/* ===================================================
+   RABBIT HOLE - UIVERSE COMPONENTS
+   Specially adapted for Rabbit Hole (Sky Blue, Deep Blue, Raspberry Pink, White)
+=================================================== */
+
+/* 1. UIVERSE BUTTONS */
+.btn-uiverse-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, var(--blue-sky) 0%, var(--blue-deep) 100%);
+  color: #FFFFFF;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px var(--blue-glow);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.btn-uiverse-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: 0.5s;
+}
+
+.btn-uiverse-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--blue-glow);
+  background: linear-gradient(135deg, #82C7EC 0%, #3B82B8 100%);
+}
+
+.btn-uiverse-primary:hover::before {
+  left: 100%;
+}
+
+.btn-uiverse-primary:active {
+  transform: translateY(0);
+}
+
+.btn-uiverse-raspberry {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, var(--pink-soft) 0%, var(--pink-raspberry) 100%);
+  color: #FFFFFF;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 18px var(--pink-glow);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.btn-uiverse-raspberry:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--pink-glow);
+  filter: brightness(1.06);
+}
+
+.btn-uiverse-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 26px;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.btn-uiverse-secondary:hover {
+  background: var(--bg-secondary);
+  border-color: var(--blue-sky);
+  color: var(--blue-deep);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-uiverse-sm {
+  padding: 8px 16px;
+  font-size: 0.88rem;
+}
+
+.btn-uiverse-lg {
+  padding: 16px 36px;
+  font-size: 1.1rem;
+}
+
+/* 2. UIVERSE SEARCH BAR */
+.uiverse-search-container {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.uiverse-search-box {
+  display: flex;
+  align-items: center;
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-full);
+  padding: 8px 12px 8px 22px;
+  box-shadow: 0 10px 30px rgba(79, 145, 199, 0.12);
+  transition: all var(--transition-normal);
+}
+
+.uiverse-search-box:focus-within {
+  border-color: var(--blue-sky);
+  box-shadow: 0 12px 35px var(--blue-glow);
+  transform: translateY(-2px);
+}
+
+.uiverse-search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 10px 14px;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  outline: none;
+}
+
+.uiverse-search-input::placeholder {
+  color: var(--text-muted);
+}
+
+.uiverse-search-btn {
+  background: linear-gradient(135deg, var(--blue-sky) 0%, var(--blue-deep) 100%);
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.uiverse-search-btn:hover {
+  background: linear-gradient(135deg, #82C7EC 0%, #3B82B8 100%);
+  transform: scale(1.02);
+}
+
+.uiverse-kbd-shortcut {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: monospace;
+  margin-right: 8px;
+}
+
+/* 3. UIVERSE TOPIC CHIPS & FILTER PILLS */
+.uiverse-pills-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.uiverse-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.uiverse-pill:hover {
+  background: var(--bg-secondary);
+  border-color: var(--blue-sky);
+  color: var(--blue-deep);
+  transform: translateY(-2px);
+}
+
+.uiverse-pill.active {
+  background: linear-gradient(135deg, var(--blue-sky) 0%, var(--blue-deep) 100%);
+  color: #FFFFFF;
+  border-color: var(--blue-sky);
+  box-shadow: 0 4px 14px var(--blue-glow);
+}
+
+.uiverse-pill-pink {
+  border-color: rgba(183, 44, 94, 0.2);
+}
+
+.uiverse-pill-pink:hover {
+  background: var(--pink-light);
+  border-color: var(--pink-soft);
+  color: var(--pink-raspberry);
+}
+
+.uiverse-pill-pink.active {
+  background: linear-gradient(135deg, var(--pink-soft) 0%, var(--pink-raspberry) 100%);
+  color: #FFFFFF;
+  border-color: var(--pink-raspberry);
+  box-shadow: 0 4px 14px var(--pink-glow);
+}
+
+/* 4. UIVERSE CARDS */
+.uiverse-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.uiverse-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--blue-sky), var(--pink-soft));
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.uiverse-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--blue-sky);
+  box-shadow: var(--shadow-lg);
+}
+
+.uiverse-card:hover::after {
+  opacity: 1;
+}
+
+/* 5. UIVERSE THEME SWITCH & TOGGLE */
+.uiverse-toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 54px;
+  height: 28px;
+}
+
+.uiverse-toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.uiverse-toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  transition: var(--transition-normal);
+  border-radius: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+}
+
+.uiverse-toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background: linear-gradient(135deg, var(--blue-sky), var(--blue-deep));
+  transition: var(--transition-normal);
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.uiverse-toggle-switch input:checked + .uiverse-toggle-slider {
+  background-color: var(--bg-card);
+  border-color: var(--pink-raspberry);
+}
+
+.uiverse-toggle-switch input:checked + .uiverse-toggle-slider:before {
+  transform: translateX(26px);
+  background: linear-gradient(135deg, var(--pink-soft), var(--pink-raspberry));
+}
+
+/* 6. UIVERSE AUTH INPUTS */
+.uiverse-form-group {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.uiverse-input {
+  width: 100%;
+  padding: 14px 16px 14px 44px;
+  background: var(--bg-input);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.uiverse-input:focus {
+  border-color: var(--blue-sky);
+  box-shadow: 0 0 0 4px var(--blue-glow);
+}
+
+.uiverse-input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.uiverse-form-label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+/* 7. UIVERSE PROGRESS BARS & STAT WIDGETS */
+.uiverse-progress-track {
+  width: 100%;
+  height: 10px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  position: relative;
+}
+
+.uiverse-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--blue-sky) 0%, var(--blue-deep) 70%, var(--pink-raspberry) 100%);
+  border-radius: var(--radius-full);
+  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.uiverse-stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.uiverse-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--blue-sky);
+}
+
+.uiverse-stat-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary);
+  color: var(--blue-deep);
+  flex-shrink: 0;
+}
+
+.uiverse-stat-icon.pink {
+  background: var(--pink-light);
+  color: var(--pink-raspberry);
+}
+
+.uiverse-stat-value {
+  font-size: 1.85rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.uiverse-stat-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+/* 8. UIVERSE STEP CONNECTOR PATH */
+.uiverse-path-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 16px 8px;
+}
+
+.uiverse-path-node {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-color);
+  padding: 14px 20px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  white-space: nowrap;
+  font-weight: 600;
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.uiverse-path-node:hover {
+  border-color: var(--blue-sky);
+  color: var(--blue-deep);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.uiverse-path-node.current {
+  background: linear-gradient(135deg, var(--pink-light) 0%, var(--bg-card) 100%);
+  border-color: var(--pink-raspberry);
+  color: var(--pink-raspberry);
+  box-shadow: 0 4px 15px var(--pink-glow);
+}
+
+.uiverse-path-arrow {
+  color: var(--blue-sky);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
