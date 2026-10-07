@@ -45,7 +45,7 @@ export default function SignInPage({ setActivePage }) {
         {/* LEFT BRANDING PANEL */}
         <div
           style={{
-            background: 'linear-gradient(135deg, var(--blue-sky) 0%, var(--blue-deep) 60%, var(--pink-raspberry) 100%)',
+            background: 'linear-gradient(145deg, #1F3E58 0%, #306C9B 38%, #4F91C7 72%, #B72C5E 100%)',
             padding: '48px',
             color: '#FFFFFF',
             display: 'flex',
@@ -56,19 +56,21 @@ export default function SignInPage({ setActivePage }) {
           }}
         >
           <div>
-            <Logo size="lg" showText={true} />
+            <Logo size="lg" showText={true} textColor="#FFFFFF" />
             <div style={{ marginTop: '36px' }}>
               <span
                 style={{
-                  fontSize: '0.8rem',
-                  fontWeight: 700,
-                  letterSpacing: '0.08em',
+                  fontSize: '0.78rem',
+                  fontWeight: 800,
+                  letterSpacing: '0.09em',
                   textTransform: 'uppercase',
-                  padding: '4px 12px',
+                  padding: '5px 14px',
                   borderRadius: 'var(--radius-full)',
-                  background: 'rgba(255, 255, 255, 0.2)',
+                  background: '#FFFFFF',
+                  color: '#243B53',
+                  boxShadow: '0 2px 10px rgba(16, 28, 36, 0.25)',
                   display: 'inline-block',
-                  marginBottom: '16px'
+                  marginBottom: '18px'
                 }}
               >
                 DISCOVER THE UNKNOWN
@@ -76,14 +78,25 @@ export default function SignInPage({ setActivePage }) {
               <h2
                 style={{
                   fontSize: '2.2rem',
-                  lineHeight: '1.2',
+                  lineHeight: '1.25',
                   marginBottom: '16px',
-                  color: '#FFFFFF'
+                  color: '#FFFFFF',
+                  fontWeight: 800,
+                  textShadow: '0 2px 12px rgba(16, 28, 36, 0.45)'
                 }}
               >
                 "Curiosity has no bottom."
               </h2>
-              <p style={{ fontSize: '0.98rem', opacity: 0.9, lineHeight: '1.6' }}>
+              <p
+                style={{
+                  fontSize: '1rem',
+                  color: '#F4FAFB',
+                  opacity: 1,
+                  lineHeight: '1.65',
+                  textShadow: '0 1px 6px rgba(16, 28, 36, 0.4)',
+                  fontWeight: 450
+                }}
+              >
                 Join thousands of explorers building dynamic knowledge trails across artificial intelligence, quantum physics, and computer science.
               </p>
             </div>
@@ -92,12 +105,19 @@ export default function SignInPage({ setActivePage }) {
           <div
             style={{
               paddingTop: '24px',
-              borderTop: '1px solid rgba(255, 255, 255, 0.25)',
-              fontSize: '0.85rem',
-              opacity: 0.85
+              borderTop: '1px solid rgba(255, 255, 255, 0.35)',
+              fontSize: '0.88rem',
+              color: '#FFFFFF',
+              opacity: 0.95,
+              fontWeight: 500,
+              textShadow: '0 1px 4px rgba(16, 28, 36, 0.35)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px'
             }}
           >
-            ✨ Functional UI-only prototype ready for backend connection
+            <span>✨</span>
+            <span>Functional UI-only prototype ready for backend connection</span>
           </div>
         </div>
 
